@@ -321,6 +321,7 @@ body {
   background: linear-gradient(135deg, var(--color-electric-light) 0%, var(--color-electric) 100%);
   opacity: 0;
   transition: opacity var(--transition-base);
+  z-index: -1;
 }
 
 .primary-cta:hover::before {
