@@ -703,7 +703,7 @@ section {
 
 .work-card-link:hover .work-link-text {
   background: var(--color-electric);
-  color: var(--color-light);
+  color: white;
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
 }
@@ -918,8 +918,14 @@ section {
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .value-card {
