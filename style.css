@@ -649,6 +649,12 @@ section {
   overflow: hidden;
 }
 
+.work-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .work-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-2xl);
@@ -680,7 +686,7 @@ section {
   font-size: var(--text-lg);
 }
 
-.work-link {
+.work-link-text {
   color: var(--color-electric);
   text-decoration: none;
   font-size: var(--text-sm);
@@ -695,7 +701,7 @@ section {
   border: 1px solid var(--color-light-300);
 }
 
-.work-link:hover {
+.work-card-link:hover .work-link-text {
   background: var(--color-electric);
   color: var(--color-light);
   transform: translateX(4px);
