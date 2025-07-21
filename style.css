@@ -598,6 +598,59 @@ section {
   text-align: center;
 }
 
+/* Special Offer Badge */
+.special-offer-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b7a 100%);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  animation: pulse 2s infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Price Display */
+.price-display {
+  text-align: center;
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.original-price {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  text-decoration: line-through;
+  margin-bottom: var(--space-1);
+}
+
+.special-price {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-emerald);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .service-note {
   font-size: var(--text-sm);
   color: var(--color-emerald);
