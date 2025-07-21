@@ -401,6 +401,7 @@ section {
   background: linear-gradient(90deg, var(--color-rose) 0%, var(--color-amber) 100%);
   transform: scaleX(0);
   transition: transform var(--transition-base);
+  z-index: -1;
 }
 
 .problem-card:hover::before {
@@ -502,6 +503,7 @@ section {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   transition: all var(--transition-base);
+  z-index: -1;
 }
 
 .service-card:hover {
