@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>AIで、あなたの余白をつくる| DelightLink - Web制作とAI業務効率化の専門家</title>
+    <meta name="description" content="WebとAIの仕組みで、あなたの挑戦を形にします。LP制作・業務効率化ツール開発・集客マーケティング施策の提案。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // スクリーンショットのフォールバック機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const screenshots = document.querySelectorAll('.work-screenshot');
+
+            screenshots.forEach(function(img) {
+                img.addEventListener('error', function() {
+                    const url = this.getAttribute('data-url');
+                    const fallback = this.getAttribute('data-fallback');
+
+                    // 最初のエラー時はWordPressのスクリーンショットサービスを試す
+                    if (!this.dataset.triedWordPress) {
+                        this.dataset.triedWordPress = 'true';
+                        this.src = `https://s0.wp.com/mshots/v1/${url.replace(/^https?:\/\//, '')}?w=300&h=200`;
+                    } else {
+                        // 2回目のエラー時はAI生成画像にフォールバック
+                        this.src = fallback;
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">DelightLink</div>
+                <nav class="nav">
+                    <a href="#services" class="nav-link">サービス</a>
+                    <a href="#works" class="nav-link">実績</a>
+                    <a href="#about" class="nav-link">私について</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <a href="#contact" class="nav-cta">無料相談</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AIで、あなたの<br />
+                    <span class="hero-accent">余白</span>をつくる
+                </h1>
+                <p class="hero-subtitle">
+                    時間と心に余白を作り<br />
+                    WebとAIの仕組みで、あなたの挑戦を"形"にします。
+                </p>
+                <a href="#contact" class="cta-button primary-cta">無料で相談する</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems-section">
+        <div class="container">
+            <h2 class="section-title">こんなお悩み<br class="sp-only">ありませんか？</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-money-dollar-circle-line"></i>
+                    </div>
+                    <p>ホームページを作りたいけど、高そう…</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-user-search-line"></i>
+                    </div>
+                    <p>ホームページ作りたいけど、頼める人がいない…</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-line-chart-line"></i>
+                    </div>
+                    <p>お客さんをもっと増やしたい</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-time-line"></i>
+                    </div>
+                    <p>時間も人手も足りない</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-robot-line"></i>
+                    </div>
+                    <p>AIって難しそう…</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="ri-customer-service-line"></i>
+                    </div>
+                    <p>事業の相談できる人がいない…</p>
+                </div>
+            </div>
+            <div class="solution-message">
+                <p><strong>そんな悩みに、寄り添い、共に解決していくのが私の役目です。</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">できること</h2>
+            <div class="services-grid">
+                <div class="service-card service-card-blue">
+                    <div class="service-icon">
+                        <i class="ri-palette-line"></i>
+                    </div>
+                    <h3>ブランディング<br>サイト制作</h3>
+                    <p>企業や個人の世界観を形にする、差別化されたWebデザインのサイトを制作します。</p>
+                </div>
+                <div class="service-card service-card-green">
+                    <div class="service-icon">
+                        <i class="ri-speed-line"></i>
+                    </div>
+                    <h3>名刺代わりの<br>サイト制作</h3>
+                    <p>最短3日・5万円で商品紹介や事業紹介LPを制作します。</p>
+                    <p class="service-note">利益度外視で、まずは信頼していただくためのサービス商品です。</p>
+                </div>
+                <div class="service-card service-card-purple">
+                    <div class="service-icon">
+                        <i class="ri-robot-line"></i>
+                    </div>
+                    <h3>オーダーメイドの<br>効率化ツール開発</h3>
+                    <p>あなたの「やりたい」を自動化・仕組み化します。</p>
+                </div>
+                <div class="service-card service-card-orange">
+                    <div class="service-icon">
+                        <i class="ri-line-chart-line"></i>
+                    </div>
+                    <h3>集客マーケティング<br>施策の提案</h3>
+                    <p>AIツール販売700件以上の実績を元に、MEO・SEO・LINE導線を整え、継続的な集客導線を設計します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works-section">
+        <div class="container">
+            <h2 class="section-title">実績・お客様の声</h2>
+
+            <!-- Web制作実績 -->
+            <div class="works-subsection">
+                <h3 class="subsection-title">制作・対応実績（抜粋）</h3>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <div class="work-thumbnail">
+                            <img src="https://image.thum.io/get/width/300/crop/800/https://earthcampus.co.jp/" alt="Earthcampus様サイト" class="work-screenshot" data-url="https://earthcampus.co.jp/" data-fallback="https://readdy.ai/api/search-image?query=Modern%20website%20design%20screenshot%2C%20clean%20interface%2C%20professional%20layout%2C%20earth%20campus%20website%2C%20educational%20platform%2C%20minimalist%20design&width=300&height=200&seq=work-001&orientation=landscape">
+                        </div>
+                        <h4>Earthcampus様サイト</h4>
+                        <a href="https://earthcampus.co.jp/" target="_blank" rel="noopener" class="work-link">サイトを見る</a>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail">
+                            <img src="https://image.thum.io/get/width/300/crop/800/https://freelance-gakkou.com/seminar/pro-freelance/" alt="プロフリーランス認定講座LP" class="work-screenshot" data-url="https://freelance-gakkou.com/seminar/pro-freelance/" data-fallback="https://readdy.ai/api/search-image?query=Landing%20page%20design%2C%20freelance%20course%20website%2C%20professional%20training%20page%2C%20modern%20web%20design%2C%20educational%20landing%20page&width=300&height=200&seq=work-002&orientation=landscape">
+                        </div>
+                        <h4>プロフリーランス認定講座 LP</h4>
+                        <a href="https://freelance-gakkou.com/seminar/pro-freelance/" target="_blank" rel="noopener" class="work-link">サイトを見る</a>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-thumbnail">
+                            <img src="https://image.thum.io/get/width/300/crop/800/https://ipnexus.jp/miraibridge.html" alt="Miraibridge様コーポレートサイト" class="work-screenshot" data-url="https://ipnexus.jp/miraibridge.html" data-fallback="https://readdy.ai/api/search-image?query=Corporate%20website%20design%2C%20business%20company%20site%2C%20professional%20corporate%20layout%2C%20modern%20business%20website&width=300&height=200&seq=work-003&orientation=landscape">
+                        </div>
+                        <h4>Miraibridge様 商品サイト</h4>
+                        <a href="https://ipnexus.jp/miraibridge.html" target="_blank" rel="noopener" class="work-link">サイトを見る</a>
+                    </div>
+                </div>
+
+                <!-- その他実績（テキスト） -->
+                <div class="achievements-text">
+                    <h4>その他実績</h4>
+                    <ul class="achievements-list">
+                        <li>大手化粧品メーカー 商品LP（20本以上）</li>
+                        <li>一部上場企業SDGsサイト制作</li>
+                        <li>自治体サイト制作</li>
+                        <li>自治体首長サイト制作</li>
+                        <li>その他100サイト以上の制作実績</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI活用ツール実績 -->
+            <div class="works-subsection">
+                <h3 class="subsection-title">AI活用ツール実績</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="ri-robot-line"></i>
+                        </div>
+                        <p>営業自動化ツール</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="ri-calculator-line"></i>
+                        </div>
+                        <p>確定申告サポートツール</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="ri-bill-line"></i>
+                        </div>
+                        <p>請求書自動発行・送信ツール</p>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="ri-file-list-line"></i>
+                        </div>
+                        <p>見積書作成ツール</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- マーケティング支援 -->
+            <div class="works-subsection">
+                <h3 class="subsection-title">マーケティング支援</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="ri-search-line"></i>
+                        </div>
+                        <p class="stat-label">サイト検索順位</p>
+                        <p class="stat-value">1位獲得</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="ri-shopping-bag-line"></i>
+                        </div>
+                        <p class="stat-label">自社商品</p>
+                        <p class="stat-value">累計700点以上販売</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="ri-twitter-line"></i>
+                        </div>
+                        <p class="stat-label">Twitterフォロワー</p>
+                        <p class="stat-value">2000人</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="ri-message-3-line"></i>
+                        </div>
+                        <p class="stat-label">公式LINE登録者数</p>
+                        <p class="stat-value">1100人</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- お客様の声 -->
+            <div class="works-subsection">
+                <h3 class="subsection-title">お客様の声</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="images/voice1.png" alt="お客様の声1">
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="images/voice2.png" alt="お客様の声2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">私について</h2>
+            <div class="about-content">
+                <div class="about-header">
+                    <div class="about-avatar">
+                        <i class="ri-user-line"></i>
+                    </div>
+                    <h3>Webマーケター＆エンジニア</h3>
+                    <p>「挑戦者に寄り添い、共に輝く未来をつくる」を志に、<br />ホームページ制作やAIを活用した業務効率化を支援。</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="ri-heart-line"></i>
+                        </div>
+                        <p>自分や身近な人の「困った」を解決する</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <p>ただの取引先ではなく、一緒に未来をつくるパートナーでいる</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <p>時間と心の余白を届け、売上UPに貢献する</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question-icon">Q</div>
+                        <h4>相談だけでも大丈夫ですか？</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-icon">A</div>
+                        <p>はい、もちろん歓迎です！</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question-icon">Q</div>
+                        <h4>AIを使ったことがありません。初心者でも使えますか？</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-icon">A</div>
+                        <p>難しい部分はすべてお任せください。操作説明やマニュアルをお渡しします。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question-icon">Q</div>
+                        <h4>費用感をもう少し詳しく知りたいです。</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-icon">A</div>
+                        <div>
+                        <p>目安は以下の通りですが、ご予算に応じて最適なプランを一緒に考えます。</p>
+                          <ul class="pricing-list">
+                              <li>名刺代わりのLP：5万円〜</li>
+                              <li>オリジナルデザインサイト：20万円〜</li>
+                              <li>業務ツール開発：内容に応じてお見積もり</li>
+                              <li>月額保守・運用サポート：1万円〜</li>
+                          </ul>
+                        </div>Webマーケター<br class="sp-only">＆エンジニア
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question-icon">Q</div>
+                        <h4>制作後のサポートはありますか？</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-icon">A</div>
+                        <p>はい、更新・修正・運用代行もご要望に応じて対応します。「自分で更新したい」方向けのレクチャーも可能です。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question-icon">Q</div>
+                        <h4>納品までどのくらいかかりますか？</h4>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-icon">A</div>
+                        <p>シンプルなLPであれば最短3日で納品可能です。ボリュームに応じて個別にご相談させていただきます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">AIで、あなたの余白をつくる。</h2>
+            <div class="contact-message">
+                <p>想いやアイデアを形にしたい、でも時間が足りない。<br />そんな方の一歩に、私は全力で寄り添います。</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                    <a href="mailto:kazuhiro_ando@delightlink-web.com">kazuhiro_ando@delightlink-web.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="ri-phone-line"></i>
+                    </div>
+                    <a href="tel:090-1097-5454">090-1097-5454</a>
+                </div>
+            </div>
+            <a href="mailto:kazuhiro_ando@delightlink-web.com" class="cta-button secondary-cta">今すぐ無料相談する</a>
+        </div>
+    </section>
+
+
+</body>
+</html>
