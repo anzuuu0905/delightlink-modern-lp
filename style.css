@@ -473,8 +473,14 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
@@ -1069,8 +1075,8 @@ section {
   color: var(--color-dark-600);
   position: relative;
   padding-left: var(--space-8);
-  padding: var(--space-3) var(--space-8);
-  background: var(--color-light-100);
+  /* padding: var(--space-3) var(--space-8); */
+  /* background: var(--color-light-100); */
   border-radius: var(--radius-lg);
   font-weight: 500;
 }
