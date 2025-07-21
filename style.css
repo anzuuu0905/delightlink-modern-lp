@@ -764,7 +764,6 @@ section {
 }
 
 .work-card-link:hover .work-link-text {
-  background: var(--color-electric);
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
 }
