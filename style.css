@@ -1227,15 +1227,35 @@ section {
   font-size: var(--text-2xl);
 }
 
-.contact-item a {
-  color: var(--color-light);
-  font-size: var(--text-lg);
+.contact-item-link {
   text-decoration: none;
-  transition: color var(--transition-fast);
-  font-weight: 500;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-base);
 }
 
-.contact-item a:hover {
+.contact-item-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-item-link span {
+  color: var(--color-light);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.contact-item-link:hover span {
   color: var(--color-electric-light);
 }
 
